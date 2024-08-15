@@ -1,5 +1,7 @@
 import { Inter, Space_Grotesk } from 'next/font/google'
 import '@/styles/tailwind.css'
+import Header from '@/components/Header'
+import { PrismicPreview } from '@prismicio/next'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -17,6 +19,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <div className={`${inter.variable} ${space_grotesk.variable}`}>
+          <Header />
           {children}
         </div>
       </body>
